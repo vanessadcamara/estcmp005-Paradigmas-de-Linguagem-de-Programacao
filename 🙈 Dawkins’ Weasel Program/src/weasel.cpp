@@ -1,19 +1,13 @@
-#include <stdio.h>
+#include <stdio.h> 
 #include <stdlib.h>
 #include <string.h>
 #include<climits>
-char alvo[] = "METHINKS IT IS LIKE A WEASEL";
-char letras[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
+char alvo[] = "METHINKS IT IS LIKE A WEASEL", letras[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
 #define QTE_LETRAS (sizeof(letras) - 1)
 #define MUTAR 20
 #define COPIAS 100
- 
- 
- 
 // retorna inteiro aleatório de 0 a n-1
 int int_rand(int n){
-	// int r = rand();
-	// r = r % (n);
 	int r = rand(), rand_max = RAND_MAX-(RAND_MAX % n);
 	while(r >= rand_max){
         r = rand();
@@ -21,7 +15,6 @@ int int_rand(int n){
     r = r / (rand_max/n);
     return r;
 }
- 
 // quantidade de caracters diferentes entre a string a e b
 int comparar(char *a, char *b){
 	int i, sum = 0;
